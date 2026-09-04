@@ -229,6 +229,7 @@
         <p>शिक्षण • संगठन • परिवर्तन</p>
     </header>
 
+    <!-- नेव्हिगेशन मेनू बार -->
     <nav>
         <a href="#home">🏠 मुख्यपृष्ठ</a>
         <a href="#about">ℹ️ आमच्याबद्दल</a>
@@ -243,15 +244,17 @@
 
     <div class="container">
 
+        <!-- १. मुख्यपृष्ठ -->
         <section id="home" class="section-box" style="border-left-color: #0d47a1; text-align: center;">
             <h2 style="border: none;">● युवा परिवर्तन संघटना ●</h2>
             <p style="font-weight: bold; color: #555; margin-bottom: 1.5rem;">स्थापना - २७/०७/२०२६</p>
             <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>ब्रीदवाक्य:</strong> “युवाशक्ती – सामाजिक परिवर्तनाची नवी दिशा”</p>
             <div class="quote-box">
-                “युवक جوडуया — विकास घडवूया — समाज बदलूया!”
+                “युवक जोडूया — विकास घडवूया — समाज बदलूया!”
             </div>
         </section>
 
+        <!-- २. आमच्याबद्दल -->
         <section id="about" class="section-box" style="border-left-color: #7b1fa2;">
             <h2>आमच्याबद्दल</h2>
             <h3>संघटनेची भूमिका</h3>
@@ -262,6 +265,7 @@
             <p>युवा परिवर्तन संघटनेचा प्रत्येक उपक्रम लोकहित, युवक विकास आणि सामाजिक परिवर्तनाच्या उद्देशाने राबविण्यात यावा.</p>
         </section>
 
+        <!-- ३. उद्देश व नियम -->
         <section id="objectives" class="section-box" style="border-left-color: #e65100;">
             <h2>उद्दिष्टे व नियमावली</h2>
             <h3>प्रमुख उद्दिष्टे</h3>
@@ -287,6 +291,7 @@
             </ol>
         </section>
 
+        <!-- ४. महा आयडी कार्ड -->
         <section id="mahaid" class="section-box" style="border-left-color: #ff9800;">
             <h2>महा आयडी कार्ड मोहीम</h2>
             <div class="benefit-nav-tabs">
@@ -318,6 +323,7 @@
             </div>
         </section>
 
+        <!-- ५. कार्य -->
         <section id="work" class="section-box" style="border-left-color: #2e7d32;">
             <h2>संघटनेचे कार्य</h2>
             <h3>युवा मार्गदर्शन व शिक्षण</h3>
@@ -326,6 +332,7 @@
             <p>रक्तदान शिबिरे, स्वच्छता मोहीम आणि आरोग्य तपासणी शिबिरांचे आयोजन.</p>
         </section>
 
+        <!-- ६. तक्रार नोंदवा -->
         <section id="complaint">
             <div class="form-container">
                 <h2 style="color: #0d47a1; font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">🚩 तक्रार नोंदवा</h2>
@@ -356,6 +363,7 @@
             </div>
         </section>
 
+        <!-- ७. तक्रार ट्रॅक -->
         <section id="track">
             <div class="form-container">
                 <h2 style="color: #0d47a1; font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">🔍 तक्रार Track करा</h2>
@@ -369,6 +377,7 @@
             </div>
         </section>
 
+        <!-- ८. सदस्य व्हा -->
         <section id="member">
             <div class="form-container">
                 <h2 style="color: #0d47a1; font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">🤝 सदस्य व्हा</h2>
@@ -390,13 +399,15 @@
             </div>
         </section>
 
+        <!-- ९. ॲडमिन पॅनल -->
         <section id="admin">
             <div class="form-container">
                 <h2 style="color: #0d47a1; font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">🔒 ॲडमिन पॅनल</h2>
                 
                 <div id="adminLoginBox" style="text-align: center; padding: 1.5rem;">
-                    <p style="margin-bottom: 1rem; font-weight: bold;">पासवर्ड टाका (admin123):</p>
-                    <input type="password" id="adminPassInput" style="padding: 0.8rem; width: 220px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1rem;">
+                    <p style="margin-bottom: 1rem; font-weight: bold;">ॲडमिन पासवर्ड टाका:</p>
+                    <!-- येथे type="password" केल्यामुळे आता टाईप करताना अक्षरं दिसणार नाहीत, तर डॉट किंवा स्टार्स (***) येतील -->
+                    <input type="password" id="adminPassInput" placeholder="पासवर्ड टाка" style="padding: 0.8rem; width: 220px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1rem;">
                     <br>
                     <button type="button" onclick="verifyAdmin()" class="btn" style="width: auto; background-color: #1976d2; color: white; padding: 0.6rem 1.5rem;">Login करा</button>
                 </div>
@@ -454,9 +465,11 @@
             const subject = document.getElementById('cSubject').value;
             const desc = document.getElementById('cDesc').value;
             const randomId = 'YPS-2026-' + Math.floor(100 + Math.random() * 900);
+            
             let complaints = JSON.parse(localStorage.getItem('complaints')) || [];
             complaints.push({ id: randomId, name, phone, subject, desc, status: 'प्रक्रियेत (Pending)' });
             localStorage.setItem('complaints', JSON.stringify(complaints));
+            
             alert('तक्रार यशस्वीरीत्या नोंदवली गेली! तुमचा Complaint ID आहे: ' + randomId);
             document.getElementById('complaintForm').reset();
             loadAdminData();
@@ -467,15 +480,5 @@
             const name = document.getElementById('mName').value;
             const phone = document.getElementById('mPhone').value;
             const address = document.getElementById('mAddress').value;
-            let members = JSON.parse(localStorage.getItem('members')) || [];
-            members.push({ name, phone, address });
-            localStorage.setItem('members', JSON.stringify(members));
-            alert('सदस्य म्हणून यशस्वी नोंदणी झाली!');
-            document.getElementById('memberForm').reset();
-            loadAdminData();
-        }
-
-        function trackComplaint(event) {
-            event.preventDefault();
-            const searchId = document.getElementById('trackIdInput').value.trim();
-            let complaints = JSON.parse(localStorage.
+            
+            let members = JSON.parse(localStorage.getI
