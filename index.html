@@ -1,4 +1,4 @@
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
@@ -35,12 +35,15 @@
             color: white;
             padding: 0.8rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
+            margin: 0 10px;
+            font-size: 1rem;
             font-weight: 500;
         }
         nav a:hover {
@@ -74,6 +77,45 @@
             color: #2e7d32;
             margin-bottom: 0.8rem;
         }
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            border-top: 4px solid #1b5e20;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .btn {
+            background-color: #2e7d32;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #1b5e20;
+        }
         footer {
             background-color: #222;
             color: white;
@@ -94,7 +136,8 @@
         <a href="#">मुख्य पृष्ठ</a>
         <a href="#work">आमचे कार्य</a>
         <a href="#team">आमची टीम</a>
-        <a href="#contact">संपर्क</a>
+        <a href="#complaint">तक्रार नोंदणी</a>
+        <a href="#volunteer">स्वयंसेवक व्हा</a>
     </nav>
 
     <div class="container">
@@ -133,6 +176,59 @@
                     <h3>सचिव</h3>
                     <p><strong>मुख्य समन्वयक</strong><br>दैनिक कामकाज आणि कागदपत्रे सांभाळणे.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- तक्रार नोंदणी फॉर्म -->
+        <section id="complaint">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">नागरिक तक्रार नोंदणी फॉर्म</h2>
+                <form>
+                    <div class="form-group">
+                    <label>तुमचे नाव:</label>
+                        <input type="text" placeholder="पूर्ण नाव प्रविष्ट करा" required>
+                    </div>
+                    <div class="form-group">
+                        <label>मोबाईल नंबर:</label>
+                        <input type="tel" placeholder="१० अंकी मोबाईल नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <label>तक्ररीचा विषय / विभाग:</label>
+                        <select>
+                            <option>रस्ते व पाणी समस्या</option>
+                            <option>आरोग्य व स्वच्छता</option>
+                            <option>शिक्षण व युवा समस्या</option>
+                            <option>इतर सामाजिक समस्या</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>तक्ररीचा सविस्तर तपशील:</label>
+                        <textarea rows="4" placeholder="तुमची समस्या येथे लिहा..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">तक्रार सबमिट करा</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- स्वयंसेवक नोंदणी फॉर्म -->
+        <section id="volunteer">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">स्वयंसेवक म्हणून नोंदणी करा</h2>
+                <form>
+                    <div class="form-group">
+                        <label>पूर्ण नाव:</label>
+                        <input type="text" placeholder="तुमचे नाव" required>
+                    </div>
+                    <div class="form-group">
+                        <label>मोबाईल नंबर:</label>
+                        <input type="tel" placeholder="मोबाईल नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <label>पत्ता / क्षेत्र:</label>
+                        <input type="text" placeholder="तुमचा पत्ता किंवा गाव" required>
+                    </div>
+                    <button type="submit" class="btn">स्वयंसेवक व्हा</button>
+                </form>
             </div>
         </section>
     </div>
