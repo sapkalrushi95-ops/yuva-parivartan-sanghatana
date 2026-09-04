@@ -162,7 +162,7 @@
         <a href="#team">आमची टीम</a>
         <a href="#complaint">तक्रार नोंदवा</a>
         <a href="#track">तक्रार ट्रॅक</a>
-        <a href="#volunteer">स्वयंसेवक</a>
+        <a href="#member">सदस्य व्हा</a>
         <a href="#admin" style="color: #ffc107; font-weight: bold;">ॲडमिन पॅनल</a>
     </nav>
 
@@ -244,7 +244,7 @@
         <section id="track">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🔍 तक्रार Track करा</h2>
-                <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">तुमचा Complaint ID टाका.</p>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">तुमचा Complaint ID टाка.</p>
                 <form onsubmit="trackComplaint(event)">
                     <div class="form-group">
                         <input type="text" id="trackIdInput" placeholder="उदा. YPS-2026-001" required>
@@ -255,24 +255,24 @@
             </div>
         </section>
 
-        <!-- स्वयंसेवक नोंदणी फॉर्म -->
-        <section id="volunteer">
+        <!-- सदस्य नोंदणी फॉर्म -->
+        <section id="member">
             <div class="form-container">
-                <h2 class="section-title" style="font-size: 1.8rem;">🤝 स्वयंसेवक व्हा</h2>
-                <form id="volunteerForm" onsubmit="handleVolunteer(event)">
+                <h2 class="section-title" style="font-size: 1.8rem;">🤝 सदस्य व्हा</h2>
+                <form id="memberForm" onsubmit="handleMember(event)">
                     <div class="form-group">
                         <label>पूर्ण नाव:</label>
-                        <input type="text" id="vName" placeholder="तुमचे नाव" required>
+                        <input type="text" id="mName" placeholder="तुमचे नाव" required>
                     </div>
                     <div class="form-group">
                         <label>मोबाईल नंबर:</label>
-                        <input type="tel" id="vPhone" placeholder="मोबाईल नंबर" required>
+                        <input type="tel" id="mPhone" placeholder="मोबाईल नंबर" required>
                     </div>
                     <div class="form-group">
                         <label>पत्ता / क्षेत्र:</label>
-                        <input type="text" id="vAddress" placeholder="तुमचा पत्ता किंवा गाव" required>
+                        <input type="text" id="mAddress" placeholder="तुमचा पत्ता किंवा गाव" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">स्वयंसेवक नोंदणी करा</button>
+                    <button type="submit" class="btn btn-primary">सदस्य नोंदणी करा</button>
                 </form>
             </div>
         </section>
@@ -280,7 +280,7 @@
         <!-- ॲडमिन पॅनल सेक्शन -->
         <section id="admin">
             <div class="form-container" style="max-width: 100%;">
-                <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल (तक्रारी व स्वयंसेवक यादी)</h2>
+                <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल (तक्रारी व सदस्य यादी)</h2>
                 <div style="overflow-x: auto;">
                     <h3 style="color: #0d47a1; margin: 1rem 0 0.5rem 0;">प्राप्त झालेल्या तक्रारी:</h3>
                     <table id="complaintTable">
@@ -299,8 +299,8 @@
                         </tbody>
                     </table>
 
-                    <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">स्वयंसेवक यादी:</h3>
-                    <table id="volunteerTable">
+                    <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">सदस्य यादी:</h3>
+                    <table id="memberTable">
                         <thead>
                             <tr>
                                 <th>नाव</th>
@@ -340,18 +340,18 @@
             loadAdminData();
         }
 
-        function handleVolunteer(event) {
+        function handleMember(event) {
             event.preventDefault();
-            const name = document.getElementById('vName').value;
-            const phone = document.getElementById('vPhone').value;
-            const address = document.getElementById('vAddress').value;
+            const name = document.getElementById('mName').value;
+            const phone = document.getElementById('mPhone').value;
+            const address = document.getElementById('mAddress').value;
 
-            let volunteers = JSON.parse(localStorage.getItem('volunteers')) || [];
-            volunteers.push({ name, phone, address });
-            localStorage.setItem('volunteers', JSON.stringify(volunteers));
+            let members = JSON.parse(localStorage.getItem('members')) || [];
+            members.push({ name, phone, address });
+            localStorage.setItem('members', JSON.stringify(members));
 
-            alert('स्वयंसेवक म्हणून यशस्वी नोंदणी झाली!');
-            document.getElementById('volunteerForm').reset();
+            alert('सदस्य म्हणून यशस्वी नोंदणी झाली!');
+            document.getElementById('memberForm').reset();
             loadAdminData();
         }
 
@@ -377,11 +377,11 @@
                 cTableBody.innerHTML += `<tr><td>${c.id}</td><td>${c.name}</td><td>${c.phone}</td><td>${c.subject}</td><td>${c.desc}</td><td>${c.status}</td></tr>`;
             });
 
-            let volunteers = JSON.parse(localStorage.getItem('volunteers')) || [];
-            let vTableBody = document.querySelector('#volunteerTable tbody');
-            vTableBody.innerHTML = '';
-            volunteers.forEach(v => {
-                vTableBody.innerHTML += `<tr><td>${v.name}</td><td>${v.phone}</td><td>${v.address}</td></tr>`;
+            let members = JSON.parse(localStorage.getItem('members')) || [];
+            let mTableBody = document.querySelector('#memberTable tbody');
+            mTableBody.innerHTML = '';
+            members.forEach(m => {
+                mTableBody.innerHTML += `<tr><td>${m.name}</td><td>${m.phone}</td><td>${m.address}</td></tr>`;
             });
         }
 
