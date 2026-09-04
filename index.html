@@ -165,7 +165,6 @@
 <body>
 
     <header>
-        <!-- इथे तुमचा लोगो जोडला आहे -->
         <img src="logo.png" alt="युवा परिवर्तन संघटना लोगो" class="logo-img">
         <h1>युवा परिवर्तन संघटना</h1>
         <p>शिक्षण • संगठन • परिवर्तन</p>
@@ -178,7 +177,7 @@
         <a href="#complaint">तक्रार नोंदवा</a>
         <a href="#track">तक्रार ट्रॅक</a>
         <a href="#member">सदस्य व्हा</a>
-        <a href="#admin" style="color: #ffc107; font-weight: bold;">ॲडमिन पॅनल</a>
+        <a href="#admin" style="color: #ffc107; font-weight: bold;" onclick="checkAdminPassword(event)">ॲडमिन पॅनल</a>
     </nav>
 
     <div class="container">
@@ -292,8 +291,8 @@
             </div>
         </section>
 
-        <!-- ॲडमिन पॅनल सेक्शन -->
-        <section id="admin">
+        <!-- ॲडमिन पॅनल सेक्शन (सुरक्षित केलेला) -->
+        <section id="admin" style="display: none;">
             <div class="form-container" style="max-width: 100%;">
                 <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल (तक्रारी व सदस्य यादी)</h2>
                 <div style="overflow-x: auto;">
@@ -358,8 +357,7 @@
         function handleMember(event) {
             event.preventDefault();
             const name = document.getElementById('mName').value;
-            const phone = document.getElementById('mPhone'
-).value;
+            const phone = document.getElementById('mPhone').value;
             const address = document.getElementById('mAddress').value;
 
             let members = JSON.parse(localStorage.getItem('members')) || [];
@@ -385,6 +383,20 @@
             }
         }
 
+        // ॲडमिन पासवर्ड फंक्शन (डीफॉल्ट पासवर्ड 'admin123' ठेवला आहे)
+        function checkAdminPassword(event) {
+            event.preventDefault();
+            let pass = prompt("कृपया ॲडमिन पासवर्ड प्रविष्ट करा:");
+            
+            if (pass === "admin123") { // तुम्ही हवा असलेला पासवर्ड इथे बदलू शकता
+                document.getElementById('admin').style.display = "block";
+                window.location.hash = "#admin";
+                loadAdminData();
+            } else if (pass !== null) {
+                alert("चुकीचा पासवर्ड! ॲडमिन पॅनल उघडू शकत नाही.");
+            }
+        }
+
         function loadAdminData() {
             let complaints = JSON.parse(localStorage.getItem('complaints')) || [];
             let cTableBody = document.querySelector('#complaintTable tbody');
@@ -400,8 +412,6 @@
                 mTableBody.innerHTML += `<tr><td>${m.name}</td><td>${m.phone}</td><td>${m.address}</td></tr>`;
             });
         }
-
-        window.onload = loadAdminData;
     </script>
 </body>
 </html>
