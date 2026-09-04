@@ -262,7 +262,7 @@
         <a href="#gallery">गॅलरी</a>
         <a href="#complaint">तक्रार नोंदवा</a>
         <a href="#track">तक्रार ट्रॅक</a>
-        <a href="#member">स्वयंसेवक व्हा</a>
+        <a href="#member">सदस्य व्हा</a>
         <a href="#admin">🔒 ॲडमिन पॅनल</a>
     </nav>
 
@@ -415,9 +415,10 @@
             </div>
         </section>
 
+        <!-- सदस्य व्हा फॉर्म -->
         <section id="member">
             <div class="form-container">
-                <h2 class="section-title" style="font-size: 1.8rem;">🤝 स्वयंसेवक व्हा</h2>
+                <h2 class="section-title" style="font-size: 1.8rem;">🤝 सदस्य व्हा</h2>
                 <form id="memberForm" onsubmit="handleMember(event)">
                     <div class="form-group">
                         <label>पूर्ण नाव:</label>
@@ -431,7 +432,7 @@
                         <label>पत्ता / क्षेत्र:</label>
                         <input type="text" id="mAddress" placeholder="तुमचा पत्ता किंवा गाव" required>
                     </div>
-                    <button type="submit" class="btn" style="background-color: #1976d2; color: white;">स्वयंसेवक नोंदणी करा</button>
+                    <button type="submit" class="btn" style="background-color: #1976d2; color: white;">सदस्य नोंदणी करा</button>
                 </form>
             </div>
         </section>
@@ -466,7 +467,7 @@
                             <tbody></tbody>
                         </table>
 
-                        <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">स्वयंसेवक यादी:</h3>
+                        <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">सदस्य यादी:</h3>
                         <table id="memberTable">
                             <thead>
                                 <tr>
@@ -500,4 +501,4 @@
                 tabBtns[i].classList.remove("active");
             }
             document.getElementById(benefitId).classList.add("active");
-            evt.currentTarget.classList.add("
+            evt.currentTarg
