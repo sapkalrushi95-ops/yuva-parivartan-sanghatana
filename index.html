@@ -167,6 +167,7 @@
     </nav>
 
     <div class="container">
+        <!-- आमचे कार्य सेक्शन -->
         <section id="work">
             <h2 class="section-title">संघटना कार्य</h2>
             <div class="grid">
@@ -185,24 +186,30 @@
             </div>
         </section>
 
+        <!-- आमची टीम सेक्शन -->
         <section id="team">
             <h2 class="section-title">आमची टीम</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>अध्यक्ष</h3>
-                    <p><strong>श्री. ऋषिकेश सपकाळ</strong><br>संघटना मार्गदर्शन आणि नेतृत्व.</p>
+                    <h3>संस्थापक</h3>
+                    <p>
+                        1. <strong>अनिकेत कांबळे</strong><br>
+                        2. <strong>रोहित सपकाळ</strong><br>
+                        3. <strong>राकेश कांबळे</strong>
+                    </p>
                 </div>
                 <div class="card">
                     <h3>उपाध्यक्ष</h3>
-                    <p><strong>कार्यकर्ता प्रतिनिधी</strong><br>संघटन विस्तार आणि नियोजन.</p>
+                    <p><strong>श्री. ऋषिकेश सपकाळ</strong><br>संघटन विस्तार आणि नियोजन.</p>
                 </div>
                 <div class="card">
                     <h3>सचिव</h3>
-                    <p><strong>मुख्य समन्वयक</strong><br>दैनिक कामकाज आणि कागदपत्रे सांभाळणे.</p>
+                    <p><strong>श्री. अक्षय कांबळे</strong><br>दैनिक कामकाज आणि कागदपत्रे सांभाळणे.</p>
                 </div>
             </div>
         </section>
 
+        <!-- तक्रार नोंदणी फॉर्म -->
         <section id="complaint">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🚩 तक्रार नोंदवा</h2>
@@ -233,10 +240,11 @@
             </div>
         </section>
 
+        <!-- तक्रार ट्रॅक करा सेक्शन -->
         <section id="track">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🔍 तक्रार Track करा</h2>
-                <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">तुमचा Complaint ID टाка.</p>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">तुमचा Complaint ID टाका.</p>
                 <form onsubmit="trackComplaint(event)">
                     <div class="form-group">
                         <input type="text" id="trackIdInput" placeholder="उदा. YPS-2026-001" required>
@@ -247,6 +255,7 @@
             </div>
         </section>
 
+        <!-- स्वयंसेवक नोंदणी फॉर्म -->
         <section id="volunteer">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🤝 स्वयंसेवक व्हा</h2>
@@ -268,6 +277,7 @@
             </div>
         </section>
 
+        <!-- ॲडमिन पॅनल सेक्शन -->
         <section id="admin">
             <div class="form-container" style="max-width: 100%;">
                 <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल (तक्रारी व स्वयंसेवक यादी)</h2>
@@ -285,7 +295,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            </tbody>
+                            <!-- डेटा इथे ऑटोमॅटिक येईल -->
+                        </tbody>
                     </table>
 
                     <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">स्वयंसेवक यादी:</h3>
@@ -298,7 +309,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            </tbody>
+                            <!-- डेटा इथे ऑटोमॅटिक येईल -->
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -310,7 +322,6 @@
     </footer>
 
     <script>
-        // तक्रार सबमिट केल्यावर सेव्ह करण्याची विधी
         function handleComplaint(event) {
             event.preventDefault();
             const name = document.getElementById('cName').value;
@@ -329,7 +340,6 @@
             loadAdminData();
         }
 
-        // स्वयंसेवक नोंदणी सेव्ह करण्याची विधी
         function handleVolunteer(event) {
             event.preventDefault();
             const name = document.getElementById('vName').value;
@@ -345,7 +355,6 @@
             loadAdminData();
         }
 
-        // तक्रार ट्रॅक करणे
         function trackComplaint(event) {
             event.preventDefault();
             const searchId = document.getElementById('trackIdInput').value.trim();
@@ -360,7 +369,6 @@
             }
         }
 
-        // ॲडमिन टेबलमध्ये डेटा लोड करणे
         function loadAdminData() {
             let complaints = JSON.parse(localStorage.getItem('complaints')) || [];
             let cTableBody = document.querySelector('#complaintTable tbody');
