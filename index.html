@@ -415,7 +415,6 @@
             </div>
         </section>
 
-        <!-- सदस्य व्हा फॉर्म -->
         <section id="member">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🤝 सदस्य व्हा</h2>
@@ -437,14 +436,13 @@
             </div>
         </section>
 
-        <!-- ॲडमिन पॅनल -->
         <section id="admin">
             <div class="form-container" style="max-width: 100%;">
                 <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल</h2>
                 
                 <div id="adminLoginBox" style="text-align: center; padding: 2rem; background: #f9f9f9; border-radius: 6px;">
                     <p style="margin-bottom: 1rem; font-weight: bold; color: #333;">ॲडमिन डेटा पाहण्यासाठी कृपया पासवर्ड टाका:</p>
-                    <input type="password" id="adminPassInput" placeholder="पासवर्ड टाका (admin123)" style="padding: 0.8rem; width: 250px; max-width: 100%; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;">
+                    <input type="password" id="adminPassInput" style="padding: 0.8rem; width: 250px; max-width: 100%; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;">
                     <button type="button" onclick="verifyAdmin()" class="btn" style="display: inline-block; width: auto; background-color: #1976d2; color: white; padding: 0.8rem 1.5rem;">Login करा</button>
                 </div>
 
@@ -501,4 +499,8 @@
                 tabBtns[i].classList.remove("active");
             }
             document.getElementById(benefitId).classList.add("active");
-            evt.currentTarg
+            evt.currentTarget.classList.add("active");
+        }
+
+        function handleComplaint(event) {
+            event.p
