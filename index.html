@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
         }
         body {
             background-color: #f4f7f6;
@@ -22,23 +21,10 @@
             color: white;
             padding: 2rem 1rem;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            margin-bottom: 1rem;
         }
         header h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
         }
         header p {
             font-size: 1.2rem;
@@ -52,18 +38,16 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            overflow-x: auto;
-            white-space: nowrap;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 8px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
         nav a:hover {
-            color: #ffc107;
+            color: #64b5f6;
         }
         .container {
             max-width: 1100px;
@@ -93,95 +77,6 @@
             color: #1976d2;
             margin-bottom: 0.8rem;
         }
-        
-        .maha-id-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            margin-bottom: 3rem;
-            border-top: 5px solid #ff9800;
-        }
-        .maha-banner-img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: contain;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            background: #000;
-        }
-
-        .benefit-nav-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-        .tab-btn {
-            background: #fff3e0;
-            border: 2px solid #ff9800;
-            color: #e65100;
-            padding: 0.6rem 1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        .tab-btn:hover, .tab-btn.active {
-            background: #ff9800;
-            color: white;
-            box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);
-        }
-
-        .benefit-content-box {
-            display: none;
-            background: #fff8f2;
-            border: 2px dashed #ff9800;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        .benefit-content-box.active {
-            display: block;
-        }
-        .benefit-content-box h4 {
-            color: #d84315;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .benefit-content-box p {
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-        .info-box-flex {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            margin-top: 2rem;
-        }
-        .info-box-flex h3 {
-            color: #0d47a1;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-        .info-box-flex ul {
-            padding-left: 20px;
-            font-size: 0.95rem;
-        }
-        .info-box-flex li {
-            margin-bottom: 0.5rem;
-        }
-
         .form-container {
             background: white;
             padding: 2rem;
@@ -221,6 +116,13 @@
         .btn:hover {
             background-color: #ffb300;
         }
+        .btn-primary {
+            background-color: #1976d2;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0d47a1;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -250,96 +152,22 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="युवा परिवर्तन संघटना लोगो" class="logo-img">
         <h1>युवा परिवर्तन संघटना</h1>
         <p>शिक्षण • संगठन • परिवर्तन</p>
     </header>
 
     <nav>
-        <a href="#home">मुख्य पृष्ठ</a>
+        <a href="#">मुख्य पृष्ठ</a>
         <a href="#work">आमचे कार्य</a>
-        <a href="#maha-id" style="color: #ffc107; font-weight: bold;">🪪 महा आयडी कार्ड</a>
-        <a href="#gallery">गॅलरी</a>
+        <a href="#team">आमची टीम</a>
         <a href="#complaint">तक्रार नोंदवा</a>
         <a href="#track">तक्रार ट्रॅक</a>
-        <a href="#member">स्वयंसेवक व्हा</a>
-        <a href="#admin">🔒 ॲडमिन पॅनल</a>
+        <a href="#member">सदस्य व्हा</a>
+        <a href="#admin" style="color: #ffc107; font-weight: bold;">ॲडमिन पॅनल</a>
     </nav>
 
-    <div class="container" id="home">
-        
-        <section id="maha-id">
-            <div class="maha-id-section">
-                <h2 class="section-title">🔶 महा आयडी कार्ड नोंदणी मोहीम 🔶</h2>
-                <img src="maha-card-poster.jpg" alt="महा आयडी कार्ड पोस्टर" class="maha-banner-img">
-                <h3 style="color: #d84315; text-align: center; margin-bottom: 1rem; font-size: 1.4rem;">👇 खालील फायद्यांवर क्लिक करून सविस्तर माहिती पाहा 👇</h3>
-                
-                <div class="benefit-nav-tabs">
-                    <button class="tab-btn active" onclick="openBenefit(event, 'b1')">1. एकाच आयडीवर योजना</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b2')">2. थेट लाभ</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b3')">3. दाखले सोपे</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b4')">4. गर्दीपासून मुक्ती</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b5')">5. विद्यार्थ्यांसाठी</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b6')">6. शेतकऱ्यांसाठी</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b7')">7. कायमचा फायदा</button>
-                    <button class="tab-btn" onclick="openBenefit(event, 'b8')">8. फसवणूक बंद</button>
-                </div>
-
-                <div id="b1" class="benefit-content-box active">
-                    <h4><span>1</span> एकाच आयडीवर सगळ्या योजना</h4>
-                    <p>जसा आपल्याकडे आधार कार्ड असतो, अगदी तसाच हा महा आयडी असेल. या एकाच आयडीवर महाराष्ट्र सरकारच्या सर्व योजनांची माहिती एकत्र मिळेल.</p>
-                </div>
-                <div id="b2" class="benefit-content-box">
-                    <h4><span>2</span> सरकारी योजनांचा लाभ थेट</h4>
-                    <p>माझी लाडकी बहीण योजना, शेतकरी सन्मान निधी, संजय गांधी निराधार योजना अशा सर्व योजनांचा लाभ मिळवण्यासाठी हा आयडी उपयोगी पडेल.</p>
-                </div>
-                <div id="b3" class="benefit-content-box">
-                    <h4><span>3</span> दाखले काढणं अगदी सोपं</h4>
-                    <p>उत्पन्नाचा दाखला, जातीचा दाखला किंवा डोमिसайл काढायचे असल्यास महा आयडीमुळे सर्व माहिती सिस्टीममध्ये उपलब्ध असेल.</p>
-                </div>
-                <div id="b4" class="benefit-content-box">
-                    <h4><span>4</span> सरकारी कार्यालयात रांगेत उभे राहण्याची गरज नाही</h4>
-                    <p>महाऑनलाइन आणि आपले सरकार पोर्टलवर या आयडीद्वारे एका क्लिकवर लॉगिन करता येईल.</p>
-                </div>
-                <div id="b5" class="benefit-content-box">
-                    <h4><span>5</span> विद्यार्थ्यांसाठी अत्यंत फायद्याचं</h4>
-                    <p>शाळा-महाविद्यालयातील शिष्यवृत्ती, महाडीबीटी पोर्टलवरील विविध शैक्षणिक योजना यासाठी हा आयडी अनिवार्य असणार आहे.</p>
-                </div>
-                <div id="b6" class="benefit-content-box">
-                    <h4><span>6</span> शेतकऱ्यांसाठी विशेष सुविधा</h4>
-                    <p>पीक विमा योजना, शासनाचे अनुदान तसेच ७/१२ उतारा थेट या आयडीशी जोडला जाईल.</p>
-                </div>
-                <div id="b7" class="benefit-content-box">
-                    <h4><span>7</span> एकदा नोंदणी, कायमचा फायदा</h4>
-                    <p>फक्त एकदाच आधार कार्ड, मोबाईल नंबर आणि बँक खाते जोडून नोंदणी पूर्ण करा.</p>
-                </div>
-                <div id="b8" class="benefit-content-box">
-                    <h4><span>8</span> फसवणूक आणि मध्यस्थांना आळा</h4>
-                    <p>नियमानुसार "एक व्यक्ती - एक आयडी" असल्यामुळे बोगस अर्ज करणाऱ्यांना आळा बसेल.</p>
-                </div>
-
-                <div class="info-box-flex">
-                    <div>
-                        <h3>📁 आवश्यक कागदपत्रे:</h3>
-                        <ul>
-                            <li><strong>आधार कार्ड</strong></li>
-                            <li><strong>आधार कार्डला लिंक असलेला मोबाईल क्रमांक</strong></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>📞 अधिक माहितीसाठी संपर्क:</h3>
-                        <p>
-                            • अनिकेत कांबळे - 8291761385<br>
-                            • अक्षय कांबळे - 9404842925<br>
-                            • राकेश कांबळे - 9076140498<br>
-                            • रोहित सपकाळ - 9082190732<br>
-                            • ऋषिकेश सपकाळ - 7588980732
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+    <div class="container">
+        <!-- आमचे कार्य सेक्शन -->
         <section id="work">
             <h2 class="section-title">संघटना कार्य</h2>
             <div class="grid">
@@ -358,20 +186,30 @@
             </div>
         </section>
 
-        <section id="gallery">
-            <h2 class="section-title">चित्रकथा (गॅलरी)</h2>
+        <!-- आमची टीम सेक्शन -->
+        <section id="team">
+            <h2 class="section-title">आमची टीम</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="photo1.jpg" alt="काम १" style="width:100%; height:160px; object-fit:cover; border-radius:4px;">
-                    <h3 style="margin-top:0.5rem;">स्वच्छ पाणी नळ जोडणी</h3>
+                    <h3>संस्थापक</h3>
+                    <p>
+                        1. <strong>अनिकेत कांबळे</strong><br>
+                        2. <strong>रोहित सपकाळ</strong><br>
+                        3. <strong>राकेश कांबळे</strong>
+                    </p>
                 </div>
                 <div class="card">
-                    <img src="photo2.jpg" alt="काम २" style="width:100%; height:160px; object-fit:cover; border-radius:4px;">
-                    <h3 style="margin-top:0.5rem;">ग्राम स्वच्छता मोहीम</h3>
+                    <h3>उपाध्यक्ष</h3>
+                    <p><strong>श्री. ऋषिकेश सपकाळ</strong><br>संघटन विस्तार आणि नियोजन.</p>
+                </div>
+                <div class="card">
+                    <h3>सचिव</h3>
+                    <p><strong>श्री. अक्षय कांबळे</strong><br>दैनिक कामकाज आणि कागदपत्रे सांभाळणे.</p>
                 </div>
             </div>
         </section>
 
+        <!-- तक्रार नोंदणी फॉर्म -->
         <section id="complaint">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🚩 तक्रार नोंदवा</h2>
@@ -402,9 +240,11 @@
             </div>
         </section>
 
+        <!-- तक्रार ट्रॅक करा सेक्शन -->
         <section id="track">
             <div class="form-container">
                 <h2 class="section-title" style="font-size: 1.8rem;">🔍 तक्रार Track करा</h2>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">तुमचा Complaint ID टाка.</p>
                 <form onsubmit="trackComplaint(event)">
                     <div class="form-group">
                         <input type="text" id="trackIdInput" placeholder="उदा. YPS-2026-001" required>
@@ -415,9 +255,10 @@
             </div>
         </section>
 
+        <!-- सदस्य नोंदणी फॉर्म -->
         <section id="member">
             <div class="form-container">
-                <h2 class="section-title" style="font-size: 1.8rem;">🤝 स्वयंसेवक व्हा</h2>
+                <h2 class="section-title" style="font-size: 1.8rem;">🤝 सदस्य व्हा</h2>
                 <form id="memberForm" onsubmit="handleMember(event)">
                     <div class="form-group">
                         <label>पूर्ण नाव:</label>
@@ -431,55 +272,47 @@
                         <label>पत्ता / क्षेत्र:</label>
                         <input type="text" id="mAddress" placeholder="तुमचा पत्ता किंवा गाव" required>
                     </div>
-                    <button type="submit" class="btn" style="background-color: #1976d2; color: white;">स्वयंसेवक नोंदणी करा</button>
+                    <button type="submit" class="btn btn-primary">सदस्य नोंदणी करा</button>
                 </form>
             </div>
         </section>
 
-        <!-- ॲडमिन पॅनल -->
+        <!-- ॲडमिन पॅनल सेक्शन -->
         <section id="admin">
             <div class="form-container" style="max-width: 100%;">
-                <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल</h2>
-                
-                <div id="adminLoginBox" style="text-align: center; padding: 2rem; background: #f9f9f9; border-radius: 6px;">
-                    <p style="margin-bottom: 1rem; font-weight: bold; color: #333;">ॲडमिन डेटा पाहण्यासाठी कृपया पासवर्ड टाका:</p>
-                    <input type="password" id="adminPassInput" placeholder="पासवर्ड टाका (admin123)" style="padding: 0.8rem; width: 250px; max-width: 100%; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;">
-                    <button type="button" onclick="verifyAdmin()" class="btn" style="display: inline-block; width: auto; background-color: #1976d2; color: white; padding: 0.8rem 1.5rem;">Login करा</button>
+                <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल (तक्रारी व सदस्य यादी)</h2>
+                <div style="overflow-x: auto;">
+                    <h3 style="color: #0d47a1; margin: 1rem 0 0.5rem 0;">प्राप्त झालेल्या तक्रारी:</h3>
+                    <table id="complaintTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>नाव</th>
+                                <th>मोबाईल</th>
+                                <th>विषय</th>
+                                <th>तपशील</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- डेटा इथे ऑटोमॅटिक येईल -->
+                        </tbody>
+                    </table>
+
+                    <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">सदस्य यादी:</h3>
+                    <table id="memberTable">
+                        <thead>
+                            <tr>
+                                <th>नाव</th>
+                                <th>मोबाईल</th>
+                                <th>पत्ता</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- डेटा इथे ऑटोमॅटिक येईल -->
+                        </tbody>
+                    </table>
                 </div>
-
-                <div id="adminContent" style="display: none; margin-top: 1.5rem;">
-                    <button type="button" onclick="logoutAdmin()" class="btn" style="width: auto; background-color: #d84315; color: white; margin-bottom: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">लॉग आउट करा</button>
-                    
-                    <div style="overflow-x: auto;">
-                        <h3 style="color: #0d47a1; margin: 1rem 0 0.5rem 0;">प्राप्त झालेल्या तक्रारी:</h3>
-                        <table id="complaintTable">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>नाव</th>
-                                    <th>मोबाईल</th>
-                                    <th>विषय</th>
-                                    <th>तपशील</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-
-                        <h3 style="color: #1976d2; margin: 2rem 0 0.5rem 0;">स्वयंसेवक यादी:</h3>
-                        <table id="memberTable">
-                            <thead>
-                                <tr>
-                                    <th>नाव</th>
-                                    <th>मोबाईल</th>
-                                    <th>पत्ता</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                </div>
-
             </div>
         </section>
     </div>
@@ -489,30 +322,19 @@
     </footer>
 
     <script>
-        function openBenefit(evt, benefitId) {
-            let i, tabContent, tabBtns;
-            tabContent = document.getElementsByClassName("benefit-content-box");
-            for (i = 0; i < tabContent.length; i++) {
-                tabContent[i].classList.remove("active");
-            }
-            tabBtns = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tabBtns.length; i++) {
-                tabBtns[i].classList.remove("active");
-            }
-            document.getElementById(benefitId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-
         function handleComplaint(event) {
             event.preventDefault();
             const name = document.getElementById('cName').value;
             const phone = document.getElementById('cPhone').value;
             const subject = document.getElementById('cSubject').value;
             const desc = document.getElementById('cDesc').value;
+            
             const randomId = 'YPS-2026-' + Math.floor(100 + Math.random() * 900);
+            
             let complaints = JSON.parse(localStorage.getItem('complaints')) || [];
             complaints.push({ id: randomId, name, phone, subject, desc, status: 'प्रक्रियेत (Pending)' });
             localStorage.setItem('complaints', JSON.stringify(complaints));
+
             alert('तक्रार यशस्वीरीत्या नोंदवली गेली! तुमचा Complaint ID आहे: ' + randomId);
             document.getElementById('complaintForm').reset();
             loadAdminData();
@@ -523,10 +345,12 @@
             const name = document.getElementById('mName').value;
             const phone = document.getElementById('mPhone').value;
             const address = document.getElementById('mAddress').value;
+
             let members = JSON.parse(localStorage.getItem('members')) || [];
             members.push({ name, phone, address });
             localStorage.setItem('members', JSON.stringify(members));
-            alert('स्वयंसेवक म्हणून यशस्वी नोंदणी झाली!');
+
+            alert('सदस्य म्हणून यशस्वी नोंदणी झाली!');
             document.getElementById('memberForm').reset();
             loadAdminData();
         }
@@ -536,29 +360,13 @@
             const searchId = document.getElementById('trackIdInput').value.trim();
             let complaints = JSON.parse(localStorage.getItem('complaints')) || [];
             const found = complaints.find(c => c.id === searchId);
+
             const resultEl = document.getElementById('trackResult');
             if(found) {
                 resultEl.innerText = `ID: ${found.id} | स्थिती: ${found.status} | विषय: ${found.subject}`;
             } else {
                 resultEl.innerText = 'हा Complaint ID सापडला नाही, कृपया योग्य आयडी तपासा.';
             }
-        }
-
-        function verifyAdmin() {
-            let passBox = document.getElementById('adminPassInput');
-            if (passBox && passBox.value === "admin123") {
-                document.getElementById('adminLoginBox').style.display = "none";
-                document.getElementById('adminContent').style.display = "block";
-                loadAdminData();
-            } else {
-                alert("चुकीचा पासवर्ड! कृपया 'admin123' असा अचूक पासवर्ड प्रविष्ट करा.");
-            }
-        }
-
-        function logoutAdmin() {
-            document.getElementById('adminPassInput').value = '';
-            document.getElementById('adminContent').style.display = "none";
-            document.getElementById('adminLoginBox').style.display = "block";
         }
 
         function loadAdminData() {
@@ -568,6 +376,7 @@
             complaints.forEach(c => {
                 cTableBody.innerHTML += `<tr><td>${c.id}</td><td>${c.name}</td><td>${c.phone}</td><td>${c.subject}</td><td>${c.desc}</td><td>${c.status}</td></tr>`;
             });
+
             let members = JSON.parse(localStorage.getItem('members')) || [];
             let mTableBody = document.querySelector('#memberTable tbody');
             mTableBody.innerHTML = '';
@@ -575,6 +384,8 @@
                 mTableBody.innerHTML += `<tr><td>${m.name}</td><td>${m.phone}</td><td>${m.address}</td></tr>`;
             });
         }
+
+        window.onload = loadAdminData;
     </script>
 </body>
 </html>
