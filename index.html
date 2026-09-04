@@ -42,8 +42,8 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 1rem;
+            margin: 0 8px;
+            font-size: 0.95rem;
             font-weight: 500;
         }
         nav a:hover {
@@ -103,8 +103,8 @@
             font-size: 1rem;
         }
         .btn {
-            background-color: #1976d2;
-            color: white;
+            background-color: #ffc107;
+            color: #333;
             padding: 0.8rem 1.5rem;
             border: none;
             border-radius: 4px;
@@ -114,6 +114,13 @@
             font-weight: bold;
         }
         .btn:hover {
+            background-color: #ffb300;
+        }
+        .btn-primary {
+            background-color: #1976d2;
+            color: white;
+        }
+        .btn-primary:hover {
             background-color: #0d47a1;
         }
         footer {
@@ -129,15 +136,16 @@
 
     <header>
         <h1>युवा परिवर्तन संघटना</h1>
-        <p>समाजसेवा, विकास आणि युवकांचे सबलीकरण</p>
+        <p>शिक्षण • संगठन • परिवर्तन</p>
     </header>
 
     <nav>
         <a href="#">मुख्य पृष्ठ</a>
         <a href="#work">आमचे कार्य</a>
         <a href="#team">आमची टीम</a>
-        <a href="#complaint">तक्रार नोंदणी</a>
-        <a href="#volunteer">स्वयंसेवक व्हा</a>
+        <a href="#complaint">तक्रार नोंदवा</a>
+        <a href="#track">तक्रार ट्रॅक</a>
+        <a href="#volunteer">स्वयंसेवक</a>
     </nav>
 
     <div class="container">
@@ -182,7 +190,7 @@
         <!-- तक्रार नोंदणी फॉर्म -->
         <section id="complaint">
             <div class="form-container">
-                <h2 class="section-title" style="font-size: 1.8rem;">नागरिक तक्रार नोंदणी फॉर्म</h2>
+                <h2 class="section-title" style="font-size: 1.8rem;">🚩 तक्रार नोंदवा</h2>
                 <form>
                     <div class="form-group">
                         <label>तुमचे नाव:</label>
@@ -205,7 +213,21 @@
                         <label>तक्ररीचा सविस्तर तपशील:</label>
                         <textarea rows="4" placeholder="तुमची समस्या येथे लिहा..." required></textarea>
                     </div>
-                    <button type="submit" class="btn">तक्रार सबमिट करा</button>
+                    <button type="submit" class="btn">तक्रार Submit करा</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- तक्रार ट्रॅक करा सेक्शन -->
+        <section id="track">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">🔍 तक्रार Track करा</h2>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">तुमचा Complaint ID टाка.</p>
+                <form onsubmit="event.preventDefault(); alert('सध्या तुमची तक्रार प्रक्रियेत (Pending) आहे.');">
+                    <div class="form-group">
+                        <input type="text" placeholder="उदा. YPS-2026-0001" required>
+                    </div>
+                    <button type="submit" class="btn">Status पाहा</button>
                 </form>
             </div>
         </section>
@@ -213,7 +235,7 @@
         <!-- स्वयंसेवक नोंदणी फॉर्म -->
         <section id="volunteer">
             <div class="form-container">
-                <h2 class="section-title" style="font-size: 1.8rem;">स्वयंसेवक म्हणून नोंदणी करा</h2>
+                <h2 class="section-title" style="font-size: 1.8rem;">🤝 स्वयंसेवक व्हा</h2>
                 <form>
                     <div class="form-group">
                         <label>पूर्ण नाव:</label>
@@ -227,7 +249,7 @@
                         <label>पत्ता / क्षेत्र:</label>
                         <input type="text" placeholder="तुमचा पत्ता किंवा गाव" required>
                     </div>
-                    <button type="submit" class="btn">स्वयंसेवक व्हा</button>
+                    <button type="submit" class="btn btn-primary">स्वयंसेवक नोंदणी करा</button>
                 </form>
             </div>
         </section>
