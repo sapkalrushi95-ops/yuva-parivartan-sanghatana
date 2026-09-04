@@ -1,1169 +1,497 @@
-/* ===== SEPARATE PAGE SYSTEM ===== */
-
-.page-section {
-    display: none;
-    animation: pageFade 0.3s ease;
-}
-
-.page-section.active {
-    display: block;
-}
-
-@keyframes pageFade {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Back to Home */
-.back-home {
-    display: inline-block;
-    background: #0d47a1;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-bottom: 20px;
-}
-
-.back-home:hover {
-    background: #1976d2;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav {
-        justify-content: flex-start;
-    }
-
-    nav a {
-        font-size: 0.85rem;
-    }
-
-    .container {
-        padding: 0 12px;
-    }
-
-    .about-sanghatana-box,
-    .maha-id-section,
-    .form-container {
-        padding: 1.2rem;
-    }
-}
-
-<!-- ================= HEADER ================= -->
-
-<header>
-    <img src="logo.png"
-         alt="युवा परिवर्तन संघटना लोगो"
-         class="logo-img">
-
-    <h1>युवा परिवर्तन संघटना</h1>
-
-    <p>शिक्षण • संगठन • परिवर्तन</p>
-</header>
-
-
-<!-- ================= NAVIGATION ================= -->
-
-<nav>
-
-    <a href="#home">मुख्य पृष्ठ</a>
-
-    <a href="#about">संघटनेची माहिती</a>
-
-    <a href="#work">आमचे कार्य</a>
-
-    <a href="#maha-id"
-       style="color:#ffc107;font-weight:bold;">
-       🪪 महा आयडी कार्ड
-    </a>
-
-    <a href="#gallery">गॅलरी</a>
-
-    <a href="#complaint">तक्रार नोंदवा</a>
-
-    <a href="#track">तक्रार ट्रॅक</a>
-
-    <a href="#member">सदस्य व्हा</a>
-
-    <a href="#admin">🔒 ॲडमिन पॅनल</a>
-
-</nav>
-
-
-<!-- ================================================= -->
-<!--                 MAIN WEBSITE                      -->
-<!-- ================================================= -->
-
-<div class="container">
-
-
-<!-- ================= HOME ================= -->
-
-<section id="home" class="page-section active">
-
-    <div class="about-sanghatana-box">
-
-        <h2>
-            ● युवा परिवर्तन संघटना ●
-        </h2>
-
-        <div class="est-date">
-            स्थापना - २७/०७/२०२६
-        </div>
-
-        <div class="about-section-block">
-
-            <h3>१. संघटनेचे नाव</h3>
-
-            <p>
-                <strong>युवा परिवर्तन संघटना</strong>
-            </p>
-
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>२. ब्रीदवाक्य</h3>
-
-            <p>
-                “युवाशक्ती – सामाजिक परिवर्तनाची नवी दिशा”
-            </p>
-
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>३. मुख्य ध्येय</h3>
-
-            <p>
-                युवकांना संघटित करून त्यांच्या सर्वांगीण
-                विकासाला चालना देणे, शिक्षण, रोजगार,
-                सामाजिक न्याय, ग्रामविकास आणि लोकहिताच्या
-                उपक्रमांमध्ये युवकांचा सक्रिय सहभाग वाढवणे.
-            </p>
-
-        </div>
-
-
-        <div class="quote-box">
-
-            “युवक जोडूया —
-            विकास घडवूया —
-            समाज बदलूया!”
-
-        </div>
-
-    </div>
-
-
-    <!-- HOME BUTTONS -->
-
-    <div class="grid">
-
-        <div class="card">
-
-            <h3>🏛️ आमचे कार्य</h3>
-
-            <p>
-                शिक्षण, आरोग्य, स्वच्छता,
-                युवक विकास आणि समाजसेवा.
-            </p>
-
-            <a href="#work"
-               class="btn"
-               style="display:block;text-align:center;text-decoration:none;">
-
-               अधिक माहिती
-
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>📝 तक्रार नोंदवा</h3>
-
-            <p>
-                तुमची समस्या आम्हाला कळवा.
-            </p>
-
-            <a href="#complaint"
-               class="btn"
-               style="display:block;text-align:center;text-decoration:none;">
-
-               तक्रार नोंदवा
-
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>🤝 सदस्य व्हा</h3>
-
-            <p>
-                युवा परिवर्तन संघटनेमध्ये सहभागी व्हा.
-            </p>
-
-            <a href="#member"
-               class="btn"
-               style="display:block;text-align:center;text-decoration:none;">
-
-               सदस्य बना
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <div class="about-sanghatana-box">
-
-        <h2>
-            युवा परिवर्तन संघटना
-        </h2>
-
-        <div class="est-date">
-            स्थापना - २७/०७/२०२६
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>१. संघटनेचे नाव</h3>
-
-            <p>
-                युवा परिवर्तन संघटना
-            </p>
-
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>२. ब्रीदवाक्य</h3>
-
-            <p>
-                “युवाशक्ती – सामाजिक परिवर्तनाची नवी दिशा”
-            </p>
-
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>३. मुख्य ध्येय</h3>
-
-            <p>
-                युवकांना संघटित करून त्यांच्या सर्वांगीण
-                विकासाला चालना देणे.
-            </p>
-
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>४. प्रमुख उद्दिष्टे</h3>
-
-            <ol>
-
-                <li>
-                    युवकांमध्ये सामाजिक बांधिलकी,
-                    नेतृत्वगुण आणि जबाबदारीची भावना निर्माण करणे.
-                </li>
-
-                <li>
-                    शिक्षण आणि रोजगाराच्या संधींबाबत
-                    मार्गदर्शन करणे.
-                </li>
-
-                <li>
-                    गावातील मूलभूत समस्या सोडविण्यासाठी
-                    लोकशाही मार्गाने प्रयत्न करणे.
-                </li>
-
-                <li>
-                    महिला, विद्यार्थी, शेतकरी आणि
-                    वंचित घटकांसाठी सामाजिक उपक्रम राबवणे.
-                </li>
-
-                <li>
-                    शासकीय योजनांची माहिती जनतेपर्यंत पोहोचवणे.
-                </li>
-
-                <li>
-                    संविधानिक मूल्ये आणि सामाजिक न्याय
-                    याबाबत जनजागृती करणे.
-                </li>
-
-            </ol>
-
-        </div>
-
-
-        <div class="about-section-block">
-
-            <h3>५. सदस्यांसाठी नियम</h3>
-
-            <ol>
-
-                <li>
-                    संघटनेच्या उद्दिष्टांशी प्रामाणिक राहणे.
-                </li>
-
-                <li>
-                    सर्व सदस्यांचा सन्मान करणे.
-                </li>
-
-                <li>
-                    संघटनेच्या नावाचा गैरवापर न करणे.
-                </li>
-
-                <li>
-                    खोटी किंवा दिशाभूल करणारी माहिती
-                    प्रसारित न करणे.
-                </li>
-
-                <li>
-                    सोशल मीडिया व WhatsApp वर सभ्य भाषा वापरणे.
-                </li>
-
-            </ol>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= WORK ================= -->
-
-<section id="work" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <h2 class="section-title">
-        संघटनेचे कार्य
-    </h2>
-
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3>
-                🎓 युवा मार्गदर्शन व शिक्षण
-            </h3>
-
-            <p>
-                युवकांना करिअर मार्गदर्शन,
-                स्पर्धा परीक्षा आणि कौशल्य विकासासाठी
-                मार्गदर्शन.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🏥 आरोग्य व सामाजिक उपक्रम
-            </h3>
-
-            <p>
-                आरोग्य तपासणी, रक्तदान आणि
-                जनजागृती अभियान.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🚰 पाणीपुरवठा सुधारणा
-            </h3>
-
-            <p>
-                नागरिकांच्या पाणीपुरवठ्याच्या
-                समस्यांसाठी पाठपुरावा.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🧹 स्वच्छता अभियान
-            </h3>
-
-            <p>
-                गाव स्वच्छता आणि कचरा व्यवस्थापन.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🌱 पर्यावरण संरक्षण
-            </h3>
-
-            <p>
-                वृक्षारोपण आणि पर्यावरण संवर्धन.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🤝 युवकांचे सबलीकरण
-            </h3>
-
-            <p>
-                युवकांमध्ये नेतृत्व आणि
-                सामाजिक जबाबदारी विकसित करणे.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= MAHA ID ================= -->
-
-<section id="maha-id" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <div class="maha-id-section">
-
-        <h2 class="section-title">
-            🪪 महा आयडी कार्ड
-        </h2>
-
-
-        <img src="maha-card-poster.jpg"
-             class="maha-banner-img"
-             alt="महा आयडी कार्ड">
-
-
-        <div class="benefit-nav-tabs">
-
-            <button class="tab-btn active"
-                    onclick="openBenefit(event,'b1')">
-
-                1. एकाच आयडीवर योजना
-
-            </button>
-
-            <button class="tab-btn"
-                    onclick="openBenefit(event,'b2')">
-
-                2. थेट लाभ
-
-            </button>
-
-            <button class="tab-btn"
-                    onclick="openBenefit(event,'b3')">
-
-                3. दाखले सोपे
-
-            </button>
-
-            <button class="tab-btn"
-                    onclick="openBenefit(event,'b4')">
-
-                4. गर्दीपासून मुक्ती
-
-            </button>
-
-        </div>
-
-
-        <div id="b1"
-             class="benefit-content-box active">
-
-            <h4>
-                1️⃣ एकाच आयडीवर योजना
-            </h4>
-
-            <p>
-                महा आयडीविषयी अधिकृत माहिती
-                तपासूनच नागरिकांनी त्याचा वापर करावा.
-            </p>
-
-        </div>
-
-
-        <div id="b2"
-             class="benefit-content-box">
-
-            <h4>
-                2️⃣ सरकारी योजनांचा लाभ
-            </h4>
-
-            <p>
-                सरकारी योजनांची पात्रता आणि
-                अधिकृत प्रक्रिया तपासा.
-            </p>
-
-        </div>
-
-
-        <div id="b3"
-             class="benefit-content-box">
-
-            <h4>
-                3️⃣ दाखले
-            </h4>
-
-            <p>
-                अधिकृत शासन सेवा वापरून
-                आवश्यक दाखले मिळवा.
-            </p>
-
-        </div>
-
-
-        <div id="b4"
-             class="benefit-content-box">
-
-            <h4>
-                4️⃣ ऑनलाइन सुविधा
-            </h4>
-
-            <p>
-                उपलब्ध ऑनलाइन सेवांची माहिती
-                अधिकृत शासन संकेतस्थळावरून घ्या.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= GALLERY ================= -->
-
-<section id="gallery" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <h2 class="section-title">
-        📸 गॅलरी
-    </h2>
-
-
-    <div class="grid">
-
-        <div class="card">
-
-            <img src="photo1.jpg"
-                 alt="कार्यक्रम फोटो"
-                 style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
-
-            <h3>
-                स्वच्छ पाणी नळ जोडणी
-            </h3>
-
-        </div>
-
-
-        <div class="card">
-
-            <img src="photo2.jpg"
-                 alt="ग्राम स्वच्छता"
-                 style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
-
-            <h3>
-                ग्राम स्वच्छता मोहीम
-            </h3>
-
-        </div>
-
-
-        <div class="card">
-
-            <img src="photo3.jpg"
-                 alt="समाजसेवा"
-                 style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
-
-            <h3>
-                समाजसेवा उपक्रम
-            </h3>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= COMPLAINT ================= -->
-
-<section id="complaint" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <div class="form-container">
-
-        <h2 class="section-title">
-            🚩 तक्रार नोंदवा
-        </h2>
-
-
-        <form id="complaintForm">
-
-            <div class="form-group">
-
-                <label>
-                    तुमचे नाव
-                </label>
-
-                <input
-                    type="text"
-                    id="cName"
-                    required
-                >
-
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>युवा परिवर्तन संघटना - अधिकृत वेबसाईट</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin-bottom: 0.8rem;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* साईड मेनू / नेव्हिगेशन */
+        nav {
+            background-color: #111;
+            color: white;
+            padding: 0.8rem;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        nav a:hover, nav a.active-menu {
+            background-color: #7b1fa2;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* विभाग लपवणे आणि दाखवणेसाठी सिस्टीम */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .page-section.active-section {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #0d47a1;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* कार्ड डिझाइन */
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            border-top: 4px solid #1976d2;
+        }
+        .card h3 {
+            color: #1976d2;
+            margin-bottom: 0.8rem;
+        }
+
+        /* आमच्याबद्दल आणि इतर माहितीसाठी स्टाईल */
+        .info-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            border-left: 5px solid #7b1fa2;
+        }
+        .info-box h3 {
+            color: #7b1fa2;
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+        .info-box p, .info-box li {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.7;
+        }
+        .info-box ul, .info-box ol {
+            padding-left: 20px;
+            margin-top: 0.5rem;
+        }
+        .info-box li {
+            margin-bottom: 0.4rem;
+        }
+        .quote-box {
+            background: #fff8e1;
+            border: 2px dashed #ffb300;
+            padding: 1.2rem;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #b71c1c;
+            margin-top: 1.5rem;
+        }
+
+        /* महा आयडी कार्ड टॅब */
+        .benefit-nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .tab-btn {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            color: #e65100;
+            padding: 0.5rem 0.9rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        .tab-btn:hover, .tab-btn.active-tab {
+            background: #ff9800;
+            color: white;
+        }
+        .benefit-content-box {
+            display: none;
+            background: #fff8f2;
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .benefit-content-box.active-benefit {
+            display: block;
+        }
+
+        /* फॉर्म डिझाइन */
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid #0d47a1;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .btn {
+            background-color: #ffc107;
+            color: #333;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #ffb300;
+        }
+
+        /* टेबल डिझाइन */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        th {
+            background-color: #1976d2;
+            color: white;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="लोगो" class="logo-img">
+        <h1>युवा परिवर्तन संघटना</h1>
+        <p>शिक्षण • संगठन • परिवर्तन</p>
+    </header>
+
+    <!-- फोटोमधील सारखा साईडस्लाइड होणारा मेनू बार -->
+    <nav>
+        <a href="javascript:void(0)" onclick="showSection('home')" id="menu-home" class="active-menu">🏠 मुख्यपृष्ठ</a>
+        <a href="javascript:void(0)" onclick="showSection('about')" id="menu-about">ℹ️ आमच्याबद्दल</a>
+        <a href="javascript:void(0)" onclick="showSection('objectives')" id="menu-objectives">🎯 उद्देश व नियम</a>
+        <a href="javascript:void(0)" onclick="showSection('mahaid')" id="menu-mahaid">🪪 महा आयडी कार्ड</a>
+        <a href="javascript:void(0)" onclick="showSection('work')" id="menu-work">⚙️ कार्य</a>
+        <a href="javascript:void(0)" onclick="showSection('gallery')" id="menu-gallery">🖼️ गॅलरी</a>
+        <a href="javascript:void(0)" onclick="showSection('complaint')" id="menu-complaint">🚩 तक्रार नोंदवा</a>
+        <a href="javascript:void(0)" onclick="showSection('track')" id="menu-track">🔍 तक्रार ट्रॅक</a>
+        <a href="javascript:void(0)" onclick="showSection('member')" id="menu-member">🤝 सदस्य व्हा</a>
+        <a href="javascript:void(0)" onclick="showSection('admin')" id="menu-admin">🔒 ॲडमिन पॅनल</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- १. मुख्यपृष्ठ -->
+        <section id="home" class="page-section active-section">
+            <div class="info-box" style="border-left-color: #0d47a1; text-align: center;">
+                <h2 style="color: #0d47a1; font-size: 2.2rem; margin-bottom: 0.5rem;">● युवा परिवर्तन संघटना ●</h2>
+                <p style="font-weight: bold; color: #555; margin-bottom: 1.5rem;">स्थापना - २७/०७/२०२६</p>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>ब्रीदवाक्य:</strong> “युवाशक्ती – सामाजिक परिवर्तनाची नवी दिशा”</p>
+                <div class="quote-box">
+                    “युवक जोडूया — विकास घडवूया — समाज बदलूया!”
+                </div>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    मोबाईल नंबर
-                </label>
-
-                <input
-                    type="tel"
-                    id="cPhone"
-                    maxlength="10"
-                    pattern="[0-9]{10}"
-                    required
-                >
-
+        <!-- २. आमच्याबद्दल -->
+        <section id="about" class="page-section">
+            <h2 class="section-title">आमच्याबद्दल</h2>
+            <div class="info-box">
+                <h3>संघटनेची भूमिका</h3>
+                <p>युवक ही केवळ समाजाची भविष्यातील शक्ती नसून आजच्या परिवर्तनाची सक्रिय शक्ती आहे. संघटित, जबाबदार आणि संवेदनशील युवकांच्या माध्यमातून गाव, तालुका आणि समाजाच्या विकासाला नवी दिशा देणे हे युवा परिवर्तन संघटनेचे प्रमुख उद्दिष्ट राहील.</p>
             </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    गाव
-                </label>
-
-                <input
-                    type="text"
-                    id="cVillage"
-                    required
-                >
-
+            <div class="info-box">
+                <h3>संघटनेची कार्यशैली</h3>
+                <p style="font-size: 1.2rem; color: #d84315; font-weight: bold; margin-bottom: 0.5rem;">“संघटन + संवाद + नियोजन + कृती + पारदर्शकता = परिवर्तन”</p>
+                <p>युवा परिवर्तन संघटनेचा प्रत्येक उपक्रम लोकहित, युवक विकास आणि सामाजिक परिवर्तनाच्या उद्देशाने राबविण्यात यावा.</p>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    तालुका
-                </label>
-
-                <input
-                    type="text"
-                    id="cTaluka"
-                    required
-                >
-
+        <!-- ३. उद्देश व नियम -->
+        <section id="objectives" class="page-section">
+            <h2 class="section-title">उद्दिष्टे व नियमावली</h2>
+            <div class="info-box">
+                <h3>प्रमुख उद्दिष्टे</h3>
+                <ol>
+                    <li>युवकांमध्ये सामाजिक बांधिलकी, नेतृत्वगुण आणि जबाबदारीची भावना निर्माण करणे.</li>
+                    <li>ग्रामीण व शहरी युवकांसाठी शिक्षण आणि रोजगाराच्या संधींबाबत मार्गदर्शन करणे.</li>
+                    <li>गावागावातील मूलभूत समस्या ओळखून त्या सोडविण्यासाठी लोकशाही मार्गाने प्रयत्न करणे.</li>
+                    <li>महिला, विद्यार्थी, शेतकरी आणि वंचित घटकांच्या विकासासाठी आवश्यक ते सामाजिक उपक्रम राबवणे.</li>
+                    <li>शासकीय योजना व युवकांसाठी उपलब्ध असलेल्या संधींची माहिती जनतेपर्यंत पोहोचवणे.</li>
+                    <li>संविधानिक मूल्ये, बंधुता, समानता, स्वातंत्र्य आणि सामाजिक न्याय यांविषयी जनजागृती करणे.</li>
+                    <li>गावनिहाय युवकांचे संघटन करून स्थानिक विकासामध्ये त्यांचा सहभाग वाढवणे.</li>
+                </ol>
             </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    जिल्हा
-                </label>
-
-                <input
-                    type="text"
-                    id="cDistrict"
-                    required
-                >
-
+            <div class="info-box" style="border-left-color: #d84315;">
+                <h3 style="color: #d84315;">सदस्यांसाठी मूलभूत नियम</h3>
+                <ol>
+                    <li>संघटनेच्या उद्दिष्टांशी प्रामाणिक राहणे.</li>
+                    <li>सर्व सदस्यांचा सन्मान करणे.</li>
+                    <li>संघटनेच्या नावाचा वैयक्तिक किंवा बेकायदेशीर कामासाठी वापर न करणे.</li>
+                    <li>खोटी, अपमानास्पद किंवा दिशाभूल करणारी माहिती प्रसारित करू नये.</li>
+                    <li>सोशल मीडिया व WhatsApp ग्रुपमध्ये सभ्य भाषा वापरणे.</li>
+                    <li>बैठकीतील निर्णयांचा आदर करणे.</li>
+                    <li>संघटनेची प्रतिष्ठा आणि सामाजिक विश्वास कायम ठेवणे.</li>
+                </ol>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    तक्रारीचा विषय
-                </label>
-
-                <select id="cSubject">
-
-                    <option>
-                        रस्ते व पाणी समस्या
-                    </option>
-
-                    <option>
-                        आरोग्य व स्वच्छता
-                    </option>
-
-                    <option>
-                        शिक्षण व युवा समस्या
-                    </option>
-
-                    <option>
-                        इतर सामाजिक समस्या
-                    </option>
-
-                </select>
-
+        <!-- ४. महा आयडी कार्ड -->
+        <section id="mahaid" class="page-section">
+            <h2 class="section-title">महा आयडी कार्ड मोहीम</h2>
+            <div class="info-box">
+                <div class="benefit-nav-tabs">
+                    <button class="tab-btn active-tab" onclick="openBenefit(event, 'b1')">1. योजना</button>
+                    <button class="tab-btn" onclick="openBenefit(event, 'b2')">2. थेट लाभ</button>
+                    <button class="tab-btn" onclick="openBenefit(event, 'b3')">3. दाखले</button>
+                    <button class="tab-btn" onclick="openBenefit(event, 'b4')">4. विद्यार्थी</button>
+                    <button class="tab-btn" onclick="openBenefit(event, 'b5')">5. शेतकरी</button>
+                </div>
+                <div id="b1" class="benefit-content-box active-benefit">
+                    <h4>एकाच आयडीवर सगळ्या योजना</h4>
+                    <p>या एकाच महा आयडीवर महाराष्ट्र सरकारच्या सर्व योजनांची माहिती एकत्र मिळेल.</p>
+                </div>
+                <div id="b2" class="benefit-content-box">
+                    <h4>सरकारी योजनांचा लाभ थेट</h4>
+                    <p>माझी लाडकी बहीण योजना, शेतकरी सन्मान निधी अशा सर्व योजनांचा लाभ मिळवण्यासाठी हा आयडी उपयोगी पडेल.</p>
+                </div>
+                <div id="b3" class="benefit-content-box">
+                    <h4>दाखले काढणं सोपं</h4>
+                    <p>उत्पन्नाचा किंवा जातीचा दाखला काढताना सर्व माहिती सिस्टीममध्ये उपलब्ध असेल.</p>
+                </div>
+                <div id="b4" class="benefit-content-box">
+                    <h4>विद्यार्थ्यांसाठी फायद्याचं</h4>
+                    <p>शाळा-महाविद्यालयातील शिष्यवृत्ती व महाडीबीटी योजनांसाठी हा आयडी अनिवार्य आहे.</p>
+                </div>
+                <div id="b5" class="benefit-content-box">
+                    <h4>शेतकऱ्यांसाठी सुविधा</h4>
+                    <p>पीक विमा व शासनाचे अनुदान थेट या आयडीशी जोडले जाईल.</p>
+                </div>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    तक्रारीचा तपशील
-                </label>
-
-                <textarea
-                    id="cDesc"
-                    rows="6"
-                    required>
-                </textarea>
-
+        <!-- ५. कार्य -->
+        <section id="work" class="page-section">
+            <h2 class="section-title">संघटनेचे कार्य</h2>
+            <div class="card">
+                <h3>युवा मार्गदर्शन व शिक्षण</h3>
+                <p>युवकांना करिअर मार्गदर्शन आणि स्पर्धा परीक्षा तयारीसाठी मार्गदर्शन शिबिरे.</p>
             </div>
-
-
-            <button
-                type="submit"
-                class="btn">
-
-                तक्रार Submit करा
-
-            </button>
-
-        </form>
-
-
-        <div id="complaintResult"></div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TRACK ================= -->
-
-<section id="track" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <div class="form-container">
-
-        <h2 class="section-title">
-            🔎 तक्रार Track करा
-        </h2>
-
-
-        <form id="trackForm">
-
-            <div class="form-group">
-
-                <label>
-                    Complaint ID
-                </label>
-
-                <input
-                    type="text"
-                    id="trackId"
-                    placeholder="YPS-12345678"
-                    required
-                >
-
+            <div class="card">
+                <h3>सामाजिक उपक्रम</h3>
+                <p>रक्तदान शिबिरे, स्वच्छता मोहीम आणि आरोग्य तपासणी शिबिरांचे आयोजन.</p>
             </div>
+        </section>
 
-
-            <button
-                type="submit"
-                class="btn">
-
-                Track करा
-
-            </button>
-
-        </form>
-
-
-        <div id="trackResult"></div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= MEMBER ================= -->
-
-<section id="member" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-    <div class="form-container">
-
-        <h2 class="section-title">
-            🤝 सदस्य व्हा
-        </h2>
-
-
-        <form id="memberForm">
-
-            <div class="form-group">
-
-                <label>
-                    पूर्ण नाव
-                </label>
-
-                <input
-                    type="text"
-                    id="mName"
-                    required
-                >
-
+        <!-- ६. गॅलरी -->
+        <section id="gallery" class="page-section">
+            <h2 class="section-title">गॅलरी</h2>
+            <div class="card">
+                <p style="text-align: center; color: #666;">येथे संघटनेच्या उपक्रमांचे फोटो अपलोड केले जातील.</p>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    मोबाईल नंबर
-                </label>
-
-                <input
-                    type="tel"
-                    id="mPhone"
-                    maxlength="10"
-                    pattern="[0-9]{10}"
-                    required
-                >
-
+        <!-- ७. तक्रार नोंदवा -->
+        <section id="complaint" class="page-section">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">🚩 तक्रार नोंदवा</h2>
+                <form id="complaintForm" onsubmit="handleComplaint(event)">
+                    <div class="form-group">
+                        <label>तुमचे नाव:</label>
+                        <input type="text" id="cName" placeholder="पूर्ण नाव" required>
+                    </div>
+                    <div class="form-group">
+                        <label>मोबाईल नंबर:</label>
+                        <input type="tel" id="cPhone" placeholder="१० अंकी नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <label>विषय:</label>
+                        <select id="cSubject">
+                            <option>रस्ते व पाणी समस्या</option>
+                            <option>आरोग्य व स्वच्छता</option>
+                            <option>शिक्षण व युवा समस्या</option>
+                            <option>इतर सामाजिक समस्या</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>तपशील:</label>
+                        <textarea id="cDesc" rows="4" placeholder="समस्या लिहा..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">तक्रार Submit करा</button>
+                </form>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    ई-मेल
-                </label>
-
-                <input
-                    type="email"
-                    id="mEmail"
-                >
-
+        <!-- ८. तक्रार ट्रॅक -->
+        <section id="track" class="page-section">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">🔍 तक्रार Track करा</h2>
+                <form onsubmit="trackComplaint(event)">
+                    <div class="form-group">
+                        <input type="text" id="trackIdInput" placeholder="उदा. YPS-2026-001" required>
+                    </div>
+                    <button type="submit" class="btn">Status पाहा</button>
+                </form>
+                <p id="trackResult" style="margin-top: 1rem; text-align: center; font-weight: bold; color: #0d47a1;"></p>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    गाव
-                </label>
-
-                <input
-                    type="text"
-                    id="mVillage"
-                >
-
+        <!-- ९. सदस्य व्हा -->
+        <section id="member" class="page-section">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">🤝 सदस्य व्हा</h2>
+                <form id="memberForm" onsubmit="handleMember(event)">
+                    <div class="form-group">
+                        <label>पूर्ण नाव:</label>
+                        <input type="text" id="mName" placeholder="तुमचे नाव" required>
+                    </div>
+                    <div class="form-group">
+                        <label>मोबाईल नंबर:</label>
+                        <input type="tel" id="mPhone" placeholder="मोबाईल नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <label>पत्ता / क्षेत्र:</label>
+                        <input type="text" id="mAddress" placeholder="पत्ता किंवा गाव" required>
+                    </div>
+                    <button type="submit" class="btn" style="background-color: #1976d2; color: white;">सदस्य नोंदणी करा</button>
+                </form>
             </div>
+        </section>
 
-
-            <div class="form-group">
-
-                <label>
-                    तालुका
-                </label>
-
-                <input
-                    type="text"
-                    id="mTaluka"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    जिल्हा
-                </label>
-
-                <input
-                    type="text"
-                    id="mDistrict"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    वय
-                </label>
-
-                <input
-                    type="number"
-                    id="mAge"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>
-                    सदस्य प्रकार
-                </label>
-
-                <select id="mType">
-
-                    <option>
-                        सामान्य सदस्य
-                    </option>
-
-                    <option>
-                        Volunteer
-                    </option>
-
-                    <option>
-                        कार्यकर्ता
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="btn">
-
-                सदस्य नोंदणी करा
-
-            </button>
-
-        </form>
-
-
-        <div id="memberResult"></div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ADMIN ================= -->
-
-<section id="admin" class="page-section">
-
-    <a href="#home" class="back-home">
-        ← मुख्य पृष्ठ
-    </a>
-
-
-    <div class="form-container">
-
-        <h2 class="section-title">
-            🔒 ॲडमिन पॅनल
-        </h2>
-
-
-        <!-- LOGIN -->
-
-        <div id="adminLogin">
-
-            <div class="form-group">
-
-                <label>
-                    Admin Password
-                </label>
-
-                <input
-                    type="password"
-                    id="adminPassword"
-                    placeholder="Password"
-                >
-
-            </div>
-
-
-            <button
-                class="btn"
-                onclick="adminLogin()">
-
-                Admin Login
-
-            </button>
-
-        </div>
-
-
-        <!-- DASHBOARD -->
-
-        <div id="adminDashboard"
-             style="display:none;">
-
-            <h3>
-                Dashboard
-            </h3>
-
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <h3>
-                        👥 सदस्य
-                    </h3>
-
-                    <h2 id="totalMembers">
-                        0
-                    </h2>
-
+        <!-- १०. ॲडमिन पॅनल -->
+        <section id="admin" class="page-section">
+            <div class="form-container">
+                <h2 class="section-title" style="font-size: 1.8rem;">🔒 ॲडमिन पॅनल</h2>
+                
+                <div id="adminLoginBox" style="text-align: center; padding: 1.5rem;">
+                    <p style="margin-bottom: 1rem; font-weight: bold;">पासवर्ड टाका (admin123):</p>
+                    <input type="password" id="adminPassInput" style="padding: 0.8rem; width: 220px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1rem;">
+                    <br>
+                    <button type="button" onclick="verifyAdmin()" class="btn" style="width: auto; background-color: #1976d2; color: white; padding: 0.6rem 1.5rem;">Login करा</button>
                 </div>
 
+                <div id="adminContent" style="display: none;">
+                    <button type="button" onclick="logoutAdmin()" class="btn" style="width: auto; background-color: #d84315; color: white; margin-bottom: 1rem; padding: 0.4rem 1rem; font-size: 0.85rem;">लॉग आउट करा</button>
+                    
+                    <h3 style="color: #0d47a1; margin-top: 1rem;">प्राप्त तक्रारी:</h3>
+                    <div style="overflow-x: auto;">
+                        <table id="complaintTable">
+                            <thead>
+                                <tr><th>ID</th><th>नाव</th><th>मोबाईल</th><th>विषय</th><th>तपशील</th><th>Status</th></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
 
-                <div class="card">
-
-                    <h3>
-                        📝 तक्रारी
-                    </h3>
-
-                    <h2 id="totalComplaints">
-                        0
-                    </h2>
-
+                    <h3 style="color: #1976d2; margin-top: 2rem;">सदस्य यादी:</h3>
+                    <div style="overflow-x: auto;">
+                        <table id="memberTable">
+                            <thead>
+                                <tr><th>नाव</th><th>मोबाईल</th><th>पत्ता</th></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
-
             </div>
-
-
-            <h3>
-                तक्रारींची यादी
-            </h3>
-
-
-            <div style="overflow-x:auto;">
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                ID
-                            </th>
-
-                            <th>
-                                नाव
-                            </th>
-
-                            <th>
-                                विषय
-                            </th>
-
-                            <th>
-                                Status
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody id="complaintTable">
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-
-            <br>
-
-
-            <button
-                class="btn"
-                onclick="adminLogout()">
-
-                Logout
-
-            </button>
-
-        </div>
+        </section>
 
     </div>
 
-</section>
+    <footer>
+        <p>&copy; 2026 युवा परिवर्तन संघटना. सर्व हक्क राखीव.</p>
+    </footer>
 
-
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    © 20
+    <script>
+        // वेगवेगळ्या पानांवर जाण्यासाठी फंक्शन
+        function showSection(sectionId) {
+            const sections = document.querySelecto
